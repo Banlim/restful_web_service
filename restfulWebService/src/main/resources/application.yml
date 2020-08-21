@@ -1,0 +1,24 @@
+#application.properties -> 설정 이름=값
+#application.yml -> 설정 이름: 값
+
+server:
+  port: 8088  servlet:    context-path: 
+  
+logging:  level:    org.springframework: DEBUG
+    
+# 우리가 사용할 다국어 파일을 messages라고 약속함.
+spring:
+  jpa:    show-sql: true
+  h2:    console:      enabled: true
+        messages:    basename: messages_ko
+    
+  devtools:    livereload:      enabled: true
+      
+#  사용자 로그인 정보를 고정시켜 놓음
+  security:    user:      name: username
+      password: passw0rd
+         
+
+    
+management:  endpoints:    web:      exposure:        include: "*"
+
